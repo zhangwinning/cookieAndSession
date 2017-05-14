@@ -16,9 +16,9 @@ curl -v -H "Cookie: foo=bar; baz = val" "http://localhost:9000"
 req.header.cookie。这里获取的是cookie的字段串,通过自定义解析把cookie解析成
 JSON数据。(parseCookie方法);<br>
 3. 服务器将更新的cookie信息发送至客户端;
->  1. 告知客户端的方式是通过相应报文形式实现的。
->  2. 相应的Cookie值设置到Set-Cookie字段中。
->  3. 客户端收到Set-Cookie响应后,之后的请求会加上Cookie字段中值
+> 1. 告知客户端的方式是通过相应报文形式实现的。
+> 2. 相应的Cookie值设置到Set-Cookie字段中。
+> 3. 客户端收到Set-Cookie响应后,之后的请求会加上Cookie字段中值
 			
 
 
