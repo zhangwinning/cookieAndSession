@@ -24,4 +24,4 @@ JSON数据。(parseCookie方法);<br />
 丢失映射关系,从而无法修改服务器端数据。
 2. session有效期非常短,通常20min内服务器和客户端没有交互行为,服务端数据将要被删除。<br />
 ### 1.基于cookie实现用户和数据的映射
-  生成session口令的方法,(generate)
+  生成session口令的方法(generate)
