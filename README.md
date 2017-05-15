@@ -1,6 +1,6 @@
 # cookie
 由于http是无状态协议,为了保持一个状态,引出cookie
-### cookie处理流程<br />
+### cookie处理流程
 1. 服务器向客户端发送Cookie;<br />
 2. 浏览器将cookie保存;<br />
 3. 之后每次浏览器发送都会携带cookie;<br />
@@ -16,12 +16,13 @@ JSON数据。(parseCookie方法);<br />
 > 1. 告知客户端的方式是通过相应报文形式实现的。
 > 2. 相应的Cookie值设置到Set-Cookie字段中。
 > 3. 客户端收到Set-Cookie响应后,之后的请求会加上Cookie字段中值。
-
+### 详见代码test/001.js
 # session			
 通过cookie,浏览器和服务器可以实现状态记录,但是cookie最为严重的问题是不安全(cookie在前后端容易被修改),引出session <br />
-### session安全的原因:<br />
+### session安全的原因:
 1. 虽然将所有数据放到Cookie中不可取,但是将口令放到Cookie中是可以的。因为口令被修改,<br />
 丢失映射关系,从而无法修改服务器端数据。
 2. session有效期非常短,通常20min内服务器和客户端没有交互行为,服务端数据将要被删除。<br />
 ### 1.基于cookie实现用户和数据的映射
   生成session口令的方法(generate)
+### 详见代码test/002.js
