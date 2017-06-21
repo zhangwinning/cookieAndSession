@@ -28,7 +28,7 @@ JSON数据。(parseCookie方法);<br />
   生成session口令的方法(generate).
   这样在session中保存的数据比直接在cookie中保存的数据安全的多,这种实现方案依赖Cookie的实现,而且是
   现在大多数web应用的方案.
-### 详见代码test/002.js
+### 详见代码test/002.js(测试成功)
 
 #### 2.通过查询字符串来实现客户端和浏览器之间的对应
 

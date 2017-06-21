@@ -1,6 +1,7 @@
 /**
  * Created by zhangwenning on 17/5/14.
  */
+
 var http = require('http');
 var _ = require('lodash');
 
@@ -18,10 +19,10 @@ var handles = (req, res)=> {
         //3. 服务器将更新的cookie信息发送至客户端;
         res.setHeader('Set-Cookie', serialize('isVisit', '1'));
         res.writeHead(200);
-        res.end("welcome to zoo");
+        res.end("welcome to zoo" + '\n');
     } else {
         res.writeHead(200);
-        res.end("welcome to zoo too");
+        res.end("welcome to zoo too" + '\n');
     }
 }
 

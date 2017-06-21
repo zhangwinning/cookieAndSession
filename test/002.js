@@ -8,13 +8,15 @@ var sessions = {};
 var key = "session_id";
 var EXPIRES = 20 * 60 * 1000;
 
-
 http.createServer((req, res) => {
+    // 1.HTTP_Parser会将报文信息解析到req.header字段上;那么Cookie就是 req.header.cookie;
     req.cookies = parseCookie(req.headers.cookie);
+    // 2.获取cookie中的sessionId字段是否存在,从而判断是否是第一次登陆
     var id = req.cookies[key];      //检查cookie值
     if (!id) {
         req.session = generate();
     } else {
+        //在内存中获取cookie信息,判断该登录信息是否存在
         var session = sessions[id];
         if (session) {
             if (session.cookie.expire > (new Date()).getTime()) {
@@ -79,7 +81,7 @@ var serialize = (name, val, opt) => {
 }
 //生成session口令的方法
 var generate = function () {
-    var session = {};
+    var session = { };
     session.id = (new Date()).getTime() + Math.random();    //时间戳 + 随机数
     session.cookie = {
         expire: (new Date()).getTime() + EXPIRES
