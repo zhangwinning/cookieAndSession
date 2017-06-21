@@ -1,0 +1,27 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "'cookie session'",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WenNingZhang/cookieAndSession.git"
+  },
+  "author": "zhangwenning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WenNingZhang/cookieAndSession/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.1",
+    "cookie-parser":"1.4.3",
+    "express-session":"1.15.3"
+  },
+  "homepage": "https://github.com/WenNingZhang/cookieAndSession#readme"
+}
